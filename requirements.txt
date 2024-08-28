@@ -1,0 +1,9 @@
+Flask==3.0.2
+scikit-learn==1.2.0
+joblib==1.2.0
+FROM python:3.x  # Use the appropriate Python version
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "app.py"]
